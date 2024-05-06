@@ -11,7 +11,7 @@ import Form from "./scenes/CustomerAddForm";
 import Line from "./scenes/line";
 import Pie from "./scenes/pie";
 import ShippingDetailsForm from "./scenes/ShippingDetailsForm/ShippingDetailsForm";
-import Geography from "./scenes/geography";
+
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import PurchaseForm from "./scenes/PurchaseOrderAddForm/PurchaseForm";
@@ -40,7 +40,7 @@ function App() {
                             <Route path = "/line" element = { < Line / > } />
                             <Route path = "/shippingdetail" element = { < ShippingDetailsForm / > } />
                             <Route path = "/purchase" element = { < PurchaseForm / > } />
-                            <Route path = "/geography" element = { < Geography / > } />
+                            
                         </Routes> 
                     </main> 
                 </div> 

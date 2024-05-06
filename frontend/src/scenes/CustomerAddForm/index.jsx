@@ -8,11 +8,17 @@ import axios from 'axios';
 
 const Form = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
-
+ 
   const handleFormSubmit = async (values, { resetForm }) => {
     try {
+      const isCityString = typeof values.city === 'string';
+      if (/\d/.test(values.city)) {
+        alert('City must not contain any numbers');
+        return;
+      }
       const response = await axios.post('http://localhost:5000/addform/customer', values);
       console.log('Customer created:', response.data);
+
       alert('Data submitted successfully'); // Show popup message
       console.log(values)
       resetForm(); // Reset form values to initial state
