@@ -25,11 +25,11 @@ const Root = () => {
           <Routes>
             <Route path="/signin" element={<Signin />} />
             <Route path="/signup" element={<Signup />} />
-            <Route path="/" element={
+            {/* <Route path="/" element={
               <PrivateRoute isAuthenticated={isAuthenticated}>
                 <App />
               </PrivateRoute>
-            } />
+            } /> */}
            
           </Routes>
           {/* <App></App> */}
